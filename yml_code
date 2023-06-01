@@ -1,0 +1,21 @@
+---
+- become: true
+  host: dev
+  name: installing_git_&_maven
+  task: null
+- apt:
+    name: git
+    update_cache: true
+  name: node_updated_for_git
+- apt:
+    name: maven
+    update_cache: true
+  name: node_updated_for_maven
+- apt:
+    name: git
+    state: latest
+  name: git_installed_successfully
+- apt:
+    name: maven
+    state: latest
+  name: maven_installed_successfully
