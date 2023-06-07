@@ -2,7 +2,7 @@
 - become: true
   host: dev
   name: "installing_git_&_maven"
-  task:
+  tasks:
 -
     apt:
      name: git
